@@ -1,0 +1,71 @@
+<div class="container mt-2">
+  <div class="row">
+    <div class="col-sm-9 m-auto">
+      <h3 class="mb-5 mt-5">
+
+        Add New User</h3>
+
+        <form class="form" #f="ngForm" novalidate (ngSubmit)="save()">
+
+  
+          <div class="mb-3">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                  <span class="input-group-text">
+                 
+                    </span>
+              </div>
+              <input type="text" class="form-control" id="unm" name="unm"  [(ngModel)]="user.customerName"
+                #unm=ngModel placeholder="Enter UserName" />
+            
+          </div>
+        </div>
+  
+          <div class="mb-3">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                 
+                </span>
+              </div>
+              <input type="text" class="form-control" id="mno" name="mno" required pattern="\d{10}" [(ngModel)]="user.mobileNumber"
+                #mno=ngModel placeholder="Enter User Mobile Number"/>
+            </div>
+          </div>
+          <div class="mb-3">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                   
+                      </span>
+                </div>
+                <input type="text" class="form-control" id="unm" name="unm"  [(ngModel)]="user.timeSlot"
+                  #unm=ngModel placeholder="Enter Time Slot" />
+              
+            </div>
+          </div>
+  
+          <div class="mb-3">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                   
+                  </span>
+                </div>
+                <input type="text" class="form-control" id="addr" name="addr" [(ngModel)]="user.address"
+                  #addr=ngModel placeholder="Enter Address" />
+              </div>
+            </div>
+  
+            <div>
+                <button class="btn btn-block btn-primary">Save</button>
+              </div>
+  
+        </form>
+  <div>
+  <br/>
+  <button class="btn btn-primary mr-3" routerLink="/homePage"> Go to Home Page</button>
+  </div>
+      </div>
+    </div>
+  </div>
